@@ -1,4 +1,13 @@
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import {
+  AlertCircle,
+  ArrowRight,
+  Clock,
+  Mail,
+  MapPin,
+  MessageSquare,
+  Phone,
+  User,
+} from "lucide-react";
 
 function ContactForm() {
   return (
@@ -137,6 +146,191 @@ function ContactForm() {
                 </p>
               </div>
               {/* header */}
+
+              {/* form */}
+              <form className="p-8">
+                {/* conditional rendering */}
+                {/* <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center space-x-3 mb-6">
+                  <AlertCircle className="w-5 h-5 text-red-600 rounded-lg p-4 flex items-center flex-shrink-0" />
+
+                  <p>Something went wrong. Please try again.</p>
+                </div> */}
+                {/* conditional rendering */}
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Full Name*
+                    </label>
+
+                    <div className="relative">
+                      <User className="absolute left-3 top-4 w-5 h-5 text-gray-400" />
+
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter Your Full Name"
+                        className={` pl-10`}
+                      />
+
+                      {/* conditional rendering */}
+                      {/* <p className="text-red-600 text-sm flex items-center mt-2">
+                        <AlertCircle className="w-4 h-4 mr-1" />
+                        Something went wrong...
+                      </p> */}
+                      {/* conditional rendering */}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Email Address*
+                    </label>
+
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-4 w-5 h-5 text-gray-400" />
+
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter Your Email Address"
+                        className={` pl-10`}
+                      />
+
+                      {/* conditional rendering */}
+                      {/* <p className="text-red-600 text-sm flex items-center mt-2">
+                        <AlertCircle className="w-4 h-4 mr-1" />
+                        Something went wrong...
+                      </p> */}
+                      {/* conditional rendering */}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Phone Number*
+                    </label>
+
+                    <div className="relative">
+                      <Phone className="absolute left-3 top-4 w-5 h-5 text-gray-400" />
+
+                      <input
+                        type="number"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter Your Phone Number"
+                        className={` pl-10`}
+                      />
+
+                      {/* conditional rendering */}
+                      {/* <p className="text-red-600 text-sm flex items-center mt-2">
+                        <AlertCircle className="w-4 h-4 mr-1" />
+                        Something went wrong...
+                      </p> */}
+                      {/* conditional rendering */}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Company*
+                    </label>
+
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-4 w-5 h-5 text-gray-400" />
+
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        placeholder="Enter Your Company Name"
+                        className={` pl-10`}
+                      />
+
+                      {/* conditional rendering */}
+                      {/* <p className="text-red-600 text-sm flex items-center mt-2">
+                        <AlertCircle className="w-4 h-4 mr-1" />
+                        Something went wrong...
+                      </p> */}
+                      {/* conditional rendering */}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-8">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Subject*
+                    </label>
+
+                    <div className="relative">
+                      <MessageSquare className="absolute left-3 top-4 w-5 h-5 text-gray-400" />
+
+                      <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="What's Regarding Your Inquiry?"
+                        className={` pl-10`}
+                      />
+
+                      {/* conditional rendering */}
+                      {/* <p className="text-red-600 text-sm flex items-center mt-2">
+                        <AlertCircle className="w-4 h-4 mr-1" />
+                        Something went wrong...
+                      </p> */}
+                      {/* conditional rendering */}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-8">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Message*
+                    </label>
+
+                    <div className="relative">
+                      <textarea
+                        type="text"
+                        id="message"
+                        name="message"
+                        placeholder="Please Provide Details about Your Inquiry"
+                        className={` pl-10`}
+                      />
+
+                      {/* conditional rendering */}
+                      {/* <p className="text-red-600 text-sm flex items-center mt-2">
+                        <AlertCircle className="w-4 h-4 mr-1" />
+                        Something went wrong...
+                      </p> */}
+                      {/* conditional rendering */}
+                      <div className="flex items-center justify-between mt-2">
+                        <p className="text-sm text-gray-500">
+                          Maximum 2000 characters
+                        </p>
+
+                        <p className="text-xs text-gray-400">
+                          *Required Fields
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button className="w-full pv-6 py-3 text-white font-medium flex items-center justify-center space-x-2 rounded-lg shadow-sm bg-slate-600 hover:bg-slate-700 focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200">
+                  <span>Send Message</span>
+                  <ArrowRight />
+                </button>
+
+                <p className="mt-4 text-sm text-gray-500 text-center">
+                  By Submitting this form, you agree to our privacy policy and
+                  terms of service.
+                </p>
+              </form>
+              {/* form */}
             </div>
           </div>
           {/* contact form */}
